@@ -81,10 +81,10 @@ body {
 // ! ===================== Main ==========================
 .content {
 	flex: 1 0 auto;
-	border: 2px solid white;
 	border-top: none;
 	padding: 20px 0;
 	&__body {
+		border: 2px solid white;
 	}
 }
 
