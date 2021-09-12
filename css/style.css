@@ -199,16 +199,16 @@ body {
 }
 .content__body {
   border: 2px solid white;
+  padding: 0 15px;
 }
 
 .card {
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 -30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .card.active {
   display: -webkit-box;
@@ -217,9 +217,10 @@ body {
 }
 .card__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 130px;
-          flex: 0 0 130px;
-  padding: 5px 15px;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+  margin: 5px auto;
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -14,7 +14,7 @@ let sound = {
 
 let image = {
 	victor: 2,
-	sanya: 2,
+	sanya: 3,
 }
 
 console.log(sound);
