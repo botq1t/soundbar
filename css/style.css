@@ -177,6 +177,23 @@ body {
   border-radius: 50%;
   border: 3px solid white;
   margin: 0px 0px 15px 0px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 50ms ease 0s;
+  transition: all 50ms ease 0s;
+}
+.header__img.active {
+  border-color: red;
+  -webkit-animation: rolling 2s linear infinite;
+          animation: rolling 2s linear infinite;
+  -webkit-transition: all 50ms ease 0s;
+  transition: all 50ms ease 0s;
+}
+.header__img:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 50ms ease 0s;
+  transition: 50ms ease 0s;
 }
 .header__extend {
   font-size: calc(20px + 5 * ((100vw - 320px) / 1694));
@@ -189,7 +206,40 @@ body {
   border-radius: 8px;
   border-top: 2px solid white;
 }
+.header__extend.active {
+  color: red;
+  border-color: red;
+}
 
+@-webkit-keyframes rolling {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rolling {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -198,8 +248,8 @@ body {
   padding: 20px 0;
 }
 .content__body {
-  border: 2px solid white;
   padding: 0 15px;
+  border: 2px solid white;
 }
 
 .card {
@@ -234,6 +284,19 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   margin: 0px 0px 5px 0px;
+}
+.card__img.active {
+  border-color: red;
+  -webkit-animation: rolling 2s linear infinite;
+          animation: rolling 2s linear infinite;
+  -webkit-transition: all 50ms ease 0s;
+  transition: all 50ms ease 0s;
+}
+.card__img:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 50ms ease 0s;
+  transition: 50ms ease 0s;
 }
 .card__description {
   text-align: center;

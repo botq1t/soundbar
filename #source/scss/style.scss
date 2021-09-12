@@ -67,6 +67,17 @@ body {
 		border-radius: 50%;
 		border: 3px solid white;
 		margin: 0px 0px 15px 0px;
+		transform: scale(1);
+		transition: all 50ms ease 0s;
+		&.active {
+			border-color: red;
+			animation: rolling 2s linear infinite;
+			transition: all 50ms ease 0s;
+		}
+		&:active {
+			transform: scale(0.9);
+			transition: 50ms ease 0s;
+		}
 	}
 
 	&__extend {
@@ -76,6 +87,22 @@ body {
 		padding: 3px;
 		border-radius: 8px;
 		border-top: 2px solid white;
+		&.active {
+			color: red;
+			border-color: red;
+		}
+	}
+}
+
+@keyframes rolling {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
 // ! ===================== Main ==========================
@@ -84,8 +111,8 @@ body {
 	border-top: none;
 	padding: 20px 0;
 	&__body {
-		border: 2px solid white;
 		padding: 0 15px;
+		border: 2px solid white;
 	}
 }
 
@@ -110,6 +137,15 @@ body {
 		border-radius: 50%;
 		border: 2px solid white;
 		margin: 0px 0px 5px 0px;
+		&.active {
+			border-color: red;
+			animation: rolling 2s linear infinite;
+			transition: all 50ms ease 0s;
+		}
+		&:active {
+			transform: scale(0.9);
+			transition: 50ms ease 0s;
+		}
 	}
 
 	&__description {
