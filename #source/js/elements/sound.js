@@ -132,7 +132,7 @@ for (let key in sound) {
 	for (let i = 0; i < sound[key].length; i++) {
 		card.append(`
 			<div id="${key}_item_${i}" class="card__item">
-				<img src="img/${key}/${key}_${Math.floor(Math.random() * image[key])}.jpg" alt="${key}_item_${i}" class="card__img">
+				<img src="img/${key}/${key}_${Math.floor(Math.random() * image[key])}.webp" alt="${key}_item_${i}" class="card__img">
 				<div class="card__description">${sound[key][i].phrase}</div>
 			</div>
 		`);
