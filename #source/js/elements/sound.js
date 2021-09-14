@@ -55,7 +55,8 @@ let sound = {
 		{ phrase: 'Завтра проходить не надо', sound: new Audio('audio/victor/zavtra.mp3') },
 		{ phrase: 'Целую тебя 1', sound: new Audio('audio/victor/kiss.mp3') },
 		{ phrase: 'Чемпион', sound: new Audio('audio/victor/champion.mp3') },
-		{ phrase: 'Параша', sound: new Audio('audio/victor/parasha.mp3') },
+		{ phrase: 'Параша 1', sound: new Audio('audio/victor/parasha.mp3') },
+		{ phrase: 'Параша 2', sound: new Audio('audio/victor/parasha-2.mp3') },
 		{ phrase: 'Колёса в грунте', sound: new Audio('audio/victor/grunt.mp3') },
 		{ phrase: 'Эф 9 попробуй нажать', sound: new Audio('audio/victor/f9.mp3') },
 		{ phrase: 'Вопросы про ВЛЕК 1', sound: new Audio('audio/victor/vlek-1.mp3') },
@@ -96,17 +97,36 @@ let sound = {
 		{ phrase: 'Интересная история Бурбика', sound: new Audio('audio/sanya/cool-story.mp3') },
 		{ phrase: 'Нахуй надо', sound: new Audio('audio/sanya/nahui-nado.mp3') },
 	],
+	payrav: [
+		{ phrase: 'Э виблядок', sound: new Audio('audio/payrav/viblyadok.mp3') },
+		{ phrase: 'Э сволоч', sound: new Audio('audio/payrav/svoloch.mp3') },
+		{ phrase: 'Ти прав', sound: new Audio('audio/payrav/ti-prav.mp3') },
+		{ phrase: 'Щоколатка', sound: new Audio('audio/payrav/chocolate.mp3') },
+	],
 }
 
 let image = {
-	victor: 5,
-	sanya: 5,
+	victor: 7,
+	sanya: 7,
+	payrav: 2,
 }
 
 console.log(sound);
 $('.content__body').empty();
+$('.header__content').empty();
 
 for (let key in sound) {
+	$('.header__content').append(`
+		<div id="${key}" class="header__item">
+			<img class="header__img" src="img/${key}/${key}_0.webp" alt="${key}">
+				<div class="header__extend">
+					<span class="icon-down"></span>
+					<span class="icon-down"></span>
+					<span class="icon-down"></span>
+			</div>
+		</div>
+	`);
+
 	$('.content__body').append(`<div id="${key}_card" class="content__card card"></div>`);
 	let card = $(`#${key}_card`);
 	for (let i = 0; i < sound[key].length; i++) {
